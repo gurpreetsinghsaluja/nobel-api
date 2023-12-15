@@ -1,0 +1,14 @@
+ol.custom-list {
+  counter-reset: list-counter;
+  list-style-type: none;
+}
+
+ol.custom-list li {
+  counter-increment: list-counter;
+  list-style: none;
+}
+
+ol.custom-list li::before {
+  content: "Laureate #" counter(list-counter) ": ";
+  font-weight: bold;
+}
